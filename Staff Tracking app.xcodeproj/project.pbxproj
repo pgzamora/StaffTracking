@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0C624FB23FB232A00388E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C624FA23FB232A00388E13 /* AppDelegate.swift */; };
+		D0C624FD23FB232A00388E13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C624FC23FB232A00388E13 /* SceneDelegate.swift */; };
+		D0C624FF23FB232A00388E13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C624FE23FB232A00388E13 /* ViewController.swift */; };
+		D0C6250223FB232A00388E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C6250023FB232A00388E13 /* Main.storyboard */; };
+		D0C6250523FB232A00388E13 /* Staff_Tracking_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0C6250323FB232A00388E13 /* Staff_Tracking_app.xcdatamodeld */; };
+		D0C6250723FB232A00388E13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C6250623FB232A00388E13 /* Assets.xcassets */; };
+		D0C6250A23FB232B00388E13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C6250823FB232B00388E13 /* LaunchScreen.storyboard */; };
+		D0C6251523FB232B00388E13 /* Staff_Tracking_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6251423FB232B00388E13 /* Staff_Tracking_appTests.swift */; };
+		D0C6252023FB232B00388E13 /* Staff_Tracking_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6251F23FB232B00388E13 /* Staff_Tracking_appUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0C6251123FB232B00388E13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0C624EF23FB232A00388E13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0C624F623FB232A00388E13;
+			remoteInfo = "Staff Tracking app";
+		};
+		D0C6251C23FB232B00388E13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0C624EF23FB232A00388E13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0C624F623FB232A00388E13;
+			remoteInfo = "Staff Tracking app";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D0C624F723FB232A00388E13 /* Staff Tracking app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Staff Tracking app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C624FA23FB232A00388E13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D0C624FC23FB232A00388E13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D0C624FE23FB232A00388E13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0C6250123FB232A00388E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0C6250423FB232A00388E13 /* Staff_Tracking_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Staff_Tracking_app.xcdatamodel; sourceTree = "<group>"; };
+		D0C6250623FB232A00388E13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0C6250923FB232B00388E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D0C6250B23FB232B00388E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0C6251023FB232B00388E13 /* Staff Tracking appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Staff Tracking appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C6251423FB232B00388E13 /* Staff_Tracking_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff_Tracking_appTests.swift; sourceTree = "<group>"; };
+		D0C6251623FB232B00388E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0C6251B23FB232B00388E13 /* Staff Tracking appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Staff Tracking appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C6251F23FB232B00388E13 /* Staff_Tracking_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff_Tracking_appUITests.swift; sourceTree = "<group>"; };
+		D0C6252123FB232B00388E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0C624F423FB232A00388E13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C6250D23FB232B00388E13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C6251823FB232B00388E13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0C624EE23FB232A00388E13 = {
+			isa = PBXGroup;
+			children = (
+				D0C624F923FB232A00388E13 /* Staff Tracking app */,
+				D0C6251323FB232B00388E13 /* Staff Tracking appTests */,
+				D0C6251E23FB232B00388E13 /* Staff Tracking appUITests */,
+				D0C624F823FB232A00388E13 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0C624F823FB232A00388E13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0C624F723FB232A00388E13 /* Staff Tracking app.app */,
+				D0C6251023FB232B00388E13 /* Staff Tracking appTests.xctest */,
+				D0C6251B23FB232B00388E13 /* Staff Tracking appUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0C624F923FB232A00388E13 /* Staff Tracking app */ = {
+			isa = PBXGroup;
+			children = (
+				D0C624FA23FB232A00388E13 /* AppDelegate.swift */,
+				D0C624FC23FB232A00388E13 /* SceneDelegate.swift */,
+				D0C624FE23FB232A00388E13 /* ViewController.swift */,
+				D0C6250023FB232A00388E13 /* Main.storyboard */,
+				D0C6250623FB232A00388E13 /* Assets.xcassets */,
+				D0C6250823FB232B00388E13 /* LaunchScreen.storyboard */,
+				D0C6250B23FB232B00388E13 /* Info.plist */,
+				D0C6250323FB232A00388E13 /* Staff_Tracking_app.xcdatamodeld */,
+			);
+			path = "Staff Tracking app";
+			sourceTree = "<group>";
+		};
+		D0C6251323FB232B00388E13 /* Staff Tracking appTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0C6251423FB232B00388E13 /* Staff_Tracking_appTests.swift */,
+				D0C6251623FB232B00388E13 /* Info.plist */,
+			);
+			path = "Staff Tracking appTests";
+			sourceTree = "<group>";
+		};
+		D0C6251E23FB232B00388E13 /* Staff Tracking appUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D0C6251F23FB232B00388E13 /* Staff_Tracking_appUITests.swift */,
+				D0C6252123FB232B00388E13 /* Info.plist */,
+			);
+			path = "Staff Tracking appUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0C624F623FB232A00388E13 /* Staff Tracking app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0C6252423FB232B00388E13 /* Build configuration list for PBXNativeTarget "Staff Tracking app" */;
+			buildPhases = (
+				D0C624F323FB232A00388E13 /* Sources */,
+				D0C624F423FB232A00388E13 /* Frameworks */,
+				D0C624F523FB232A00388E13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Staff Tracking app";
+			productName = "Staff Tracking app";
+			productReference = D0C624F723FB232A00388E13 /* Staff Tracking app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0C6250F23FB232B00388E13 /* Staff Tracking appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0C6252723FB232B00388E13 /* Build configuration list for PBXNativeTarget "Staff Tracking appTests" */;
+			buildPhases = (
+				D0C6250C23FB232B00388E13 /* Sources */,
+				D0C6250D23FB232B00388E13 /* Frameworks */,
+				D0C6250E23FB232B00388E13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0C6251223FB232B00388E13 /* PBXTargetDependency */,
+			);
+			name = "Staff Tracking appTests";
+			productName = "Staff Tracking appTests";
+			productReference = D0C6251023FB232B00388E13 /* Staff Tracking appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D0C6251A23FB232B00388E13 /* Staff Tracking appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0C6252A23FB232B00388E13 /* Build configuration list for PBXNativeTarget "Staff Tracking appUITests" */;
+			buildPhases = (
+				D0C6251723FB232B00388E13 /* Sources */,
+				D0C6251823FB232B00388E13 /* Frameworks */,
+				D0C6251923FB232B00388E13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0C6251D23FB232B00388E13 /* PBXTargetDependency */,
+			);
+			name = "Staff Tracking appUITests";
+			productName = "Staff Tracking appUITests";
+			productReference = D0C6251B23FB232B00388E13 /* Staff Tracking appUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0C624EF23FB232A00388E13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Phillip Zamora";
+				TargetAttributes = {
+					D0C624F623FB232A00388E13 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					D0C6250F23FB232B00388E13 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = D0C624F623FB232A00388E13;
+					};
+					D0C6251A23FB232B00388E13 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = D0C624F623FB232A00388E13;
+					};
+				};
+			};
+			buildConfigurationList = D0C624F223FB232A00388E13 /* Build configuration list for PBXProject "Staff Tracking app" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0C624EE23FB232A00388E13;
+			productRefGroup = D0C624F823FB232A00388E13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0C624F623FB232A00388E13 /* Staff Tracking app */,
+				D0C6250F23FB232B00388E13 /* Staff Tracking appTests */,
+				D0C6251A23FB232B00388E13 /* Staff Tracking appUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0C624F523FB232A00388E13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C6250A23FB232B00388E13 /* LaunchScreen.storyboard in Resources */,
+				D0C6250723FB232A00388E13 /* Assets.xcassets in Resources */,
+				D0C6250223FB232A00388E13 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C6250E23FB232B00388E13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C6251923FB232B00388E13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0C624F323FB232A00388E13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C624FF23FB232A00388E13 /* ViewController.swift in Sources */,
+				D0C6250523FB232A00388E13 /* Staff_Tracking_app.xcdatamodeld in Sources */,
+				D0C624FB23FB232A00388E13 /* AppDelegate.swift in Sources */,
+				D0C624FD23FB232A00388E13 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C6250C23FB232B00388E13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C6251523FB232B00388E13 /* Staff_Tracking_appTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C6251723FB232B00388E13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C6252023FB232B00388E13 /* Staff_Tracking_appUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0C6251223FB232B00388E13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0C624F623FB232A00388E13 /* Staff Tracking app */;
+			targetProxy = D0C6251123FB232B00388E13 /* PBXContainerItemProxy */;
+		};
+		D0C6251D23FB232B00388E13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0C624F623FB232A00388E13 /* Staff Tracking app */;
+			targetProxy = D0C6251C23FB232B00388E13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0C6250023FB232A00388E13 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0C6250123FB232A00388E13 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0C6250823FB232B00388E13 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0C6250923FB232B00388E13 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0C6252223FB232B00388E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D0C6252323FB232B00388E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0C6252523FB232B00388E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 45J9W5V5S9;
+				INFOPLIST_FILE = "Staff Tracking app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SeniorDesign.Staff-Tracking-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0C6252623FB232B00388E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 45J9W5V5S9;
+				INFOPLIST_FILE = "Staff Tracking app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SeniorDesign.Staff-Tracking-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D0C6252823FB232B00388E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 45J9W5V5S9;
+				INFOPLIST_FILE = "Staff Tracking appTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SeniorDesign.Staff-Tracking-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Staff Tracking app.app/Staff Tracking app";
+			};
+			name = Debug;
+		};
+		D0C6252923FB232B00388E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 45J9W5V5S9;
+				INFOPLIST_FILE = "Staff Tracking appTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SeniorDesign.Staff-Tracking-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Staff Tracking app.app/Staff Tracking app";
+			};
+			name = Release;
+		};
+		D0C6252B23FB232B00388E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 45J9W5V5S9;
+				INFOPLIST_FILE = "Staff Tracking appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SeniorDesign.Staff-Tracking-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Staff Tracking app";
+			};
+			name = Debug;
+		};
+		D0C6252C23FB232B00388E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 45J9W5V5S9;
+				INFOPLIST_FILE = "Staff Tracking appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SeniorDesign.Staff-Tracking-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Staff Tracking app";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0C624F223FB232A00388E13 /* Build configuration list for PBXProject "Staff Tracking app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C6252223FB232B00388E13 /* Debug */,
+				D0C6252323FB232B00388E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0C6252423FB232B00388E13 /* Build configuration list for PBXNativeTarget "Staff Tracking app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C6252523FB232B00388E13 /* Debug */,
+				D0C6252623FB232B00388E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0C6252723FB232B00388E13 /* Build configuration list for PBXNativeTarget "Staff Tracking appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C6252823FB232B00388E13 /* Debug */,
+				D0C6252923FB232B00388E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0C6252A23FB232B00388E13 /* Build configuration list for PBXNativeTarget "Staff Tracking appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C6252B23FB232B00388E13 /* Debug */,
+				D0C6252C23FB232B00388E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D0C6250323FB232A00388E13 /* Staff_Tracking_app.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D0C6250423FB232A00388E13 /* Staff_Tracking_app.xcdatamodel */,
+			);
+			currentVersion = D0C6250423FB232A00388E13 /* Staff_Tracking_app.xcdatamodel */;
+			path = Staff_Tracking_app.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D0C624EF23FB232A00388E13 /* Project object */;
+}
