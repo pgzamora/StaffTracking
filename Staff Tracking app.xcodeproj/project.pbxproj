@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0B50AA92401BD48007CD5BD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B50AA82401BD48007CD5BD /* LoginViewController.swift */; };
+		D0B50AAB2401BD6F007CD5BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B50AAA2401BD6F007CD5BD /* HomeViewController.swift */; };
+		D0B50AAF2401E683007CD5BD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B50AAE2401E683007CD5BD /* MapKit.framework */; };
 		D0C624FB23FB232A00388E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C624FA23FB232A00388E13 /* AppDelegate.swift */; };
 		D0C624FD23FB232A00388E13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C624FC23FB232A00388E13 /* SceneDelegate.swift */; };
 		D0C624FF23FB232A00388E13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C624FE23FB232A00388E13 /* ViewController.swift */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0B50AA82401BD48007CD5BD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D0B50AAA2401BD6F007CD5BD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D0B50AAE2401E683007CD5BD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D0C624F723FB232A00388E13 /* Staff Tracking app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Staff Tracking app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C624FA23FB232A00388E13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C624FC23FB232A00388E13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B50AAF2401E683007CD5BD /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0B50AAC2401BDAA007CD5BD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0C624FE23FB232A00388E13 /* ViewController.swift */,
+				D0B50AA82401BD48007CD5BD /* LoginViewController.swift */,
+				D0B50AAA2401BD6F007CD5BD /* HomeViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D0B50AAD2401E683007CD5BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0B50AAE2401E683007CD5BD /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D0C624EE23FB232A00388E13 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +110,7 @@
 				D0C6251323FB232B00388E13 /* Staff Tracking appTests */,
 				D0C6251E23FB232B00388E13 /* Staff Tracking appUITests */,
 				D0C624F823FB232A00388E13 /* Products */,
+				D0B50AAD2401E683007CD5BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,7 +129,7 @@
 			children = (
 				D0C624FA23FB232A00388E13 /* AppDelegate.swift */,
 				D0C624FC23FB232A00388E13 /* SceneDelegate.swift */,
-				D0C624FE23FB232A00388E13 /* ViewController.swift */,
+				D0B50AAC2401BDAA007CD5BD /* View Controllers */,
 				D0C6250023FB232A00388E13 /* Main.storyboard */,
 				D0C6250623FB232A00388E13 /* Assets.xcassets */,
 				D0C6250823FB232B00388E13 /* LaunchScreen.storyboard */,
@@ -265,7 +291,9 @@
 				D0C624FF23FB232A00388E13 /* ViewController.swift in Sources */,
 				D0C6250523FB232A00388E13 /* Staff_Tracking_app.xcdatamodeld in Sources */,
 				D0C624FB23FB232A00388E13 /* AppDelegate.swift in Sources */,
+				D0B50AA92401BD48007CD5BD /* LoginViewController.swift in Sources */,
 				D0C624FD23FB232A00388E13 /* SceneDelegate.swift in Sources */,
+				D0B50AAB2401BD6F007CD5BD /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
