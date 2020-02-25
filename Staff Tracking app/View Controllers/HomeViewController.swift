@@ -47,7 +47,8 @@ class HomeViewController: UIViewController {
         isTravel = !isTravel
         
         if isTravel {
-             workButton.setTitle("Work", for: .normal)
+            
+            workButton.setImage(UIImage(named: "WorkMode"), for: .normal)
             workTimerLabel.isEnabled=true
             workTimerLabel.backgroundColor = UIColor.green
             timerLabel.isEnabled=false
@@ -55,7 +56,7 @@ class HomeViewController: UIViewController {
            
         }
         else {
-             workButton.setTitle("Travel", for: .normal)
+            workButton.setImage(UIImage(named: "TravelMode"), for: .normal)
             timerLabel.isEnabled=true
             timerLabel.backgroundColor = UIColor.green
             workTimerLabel.isEnabled=false

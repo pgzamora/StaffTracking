@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D059B4B124058256000C8126 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D059B4B024058256000C8126 /* Media.xcassets */; };
 		D0B50AA92401BD48007CD5BD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B50AA82401BD48007CD5BD /* LoginViewController.swift */; };
 		D0B50AAB2401BD6F007CD5BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B50AAA2401BD6F007CD5BD /* HomeViewController.swift */; };
 		D0B50AAF2401E683007CD5BD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B50AAE2401E683007CD5BD /* MapKit.framework */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D059B4B024058256000C8126 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		D0B50AA82401BD48007CD5BD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D0B50AAA2401BD6F007CD5BD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D0B50AAE2401E683007CD5BD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -106,6 +108,7 @@
 		D0C624EE23FB232A00388E13 = {
 			isa = PBXGroup;
 			children = (
+				D059B4B024058256000C8126 /* Media.xcassets */,
 				D0C624F923FB232A00388E13 /* Staff Tracking app */,
 				D0C6251323FB232B00388E13 /* Staff Tracking appTests */,
 				D0C6251E23FB232B00388E13 /* Staff Tracking appUITests */,
@@ -263,6 +266,7 @@
 			files = (
 				D0C6250A23FB232B00388E13 /* LaunchScreen.storyboard in Resources */,
 				D0C6250723FB232A00388E13 /* Assets.xcassets in Resources */,
+				D059B4B124058256000C8126 /* Media.xcassets in Resources */,
 				D0C6250223FB232A00388E13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
