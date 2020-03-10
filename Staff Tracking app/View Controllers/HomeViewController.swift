@@ -11,12 +11,15 @@ import MapKit
 import CoreLocation
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
-    
+   
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
+       
         resetButton.isEnabled=false
         pauseButton.isEnabled=false
         startButton.isEnabled=true
@@ -39,6 +42,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var workButton: UIButton!
     @IBOutlet weak var workTimerLabel: UILabel!
+    //@IBOutlet weak var profileButton: UIButton!
+    //@IBOutlet weak var logbookButton: UIButton!
+    //@IBOutlet weak var homeButton: UIButton!
     
     var isTravel=false;
     
@@ -72,9 +78,12 @@ class HomeViewController: UIViewController {
     var workCounter=0.0
     
     @IBAction func resetDidTap( sender:Any ){
+        
+        print(result)
+        
         timer.invalidate()
         isTimerRunning = false
-        
+       
         if workTimerLabel.isEnabled{
             workCounter=0.0
             workTimerLabel.text="00.00.00.0"

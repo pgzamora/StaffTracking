@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00B7B3E2416CE8C005302A8 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00B7B3D2416CE8C005302A8 /* PeopleViewController.swift */; };
+		D01E499D24107B9F00587855 /* LogbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E499C24107B9F00587855 /* LogbookViewController.swift */; };
+		D01E499F24107BB100587855 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01E499E24107BB100587855 /* ProfileViewController.swift */; };
 		D059B4B124058256000C8126 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D059B4B024058256000C8126 /* Media.xcassets */; };
 		D0B50AA92401BD48007CD5BD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B50AA82401BD48007CD5BD /* LoginViewController.swift */; };
 		D0B50AAB2401BD6F007CD5BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B50AAA2401BD6F007CD5BD /* HomeViewController.swift */; };
@@ -20,6 +23,7 @@
 		D0C6250A23FB232B00388E13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C6250823FB232B00388E13 /* LaunchScreen.storyboard */; };
 		D0C6251523FB232B00388E13 /* Staff_Tracking_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6251423FB232B00388E13 /* Staff_Tracking_appTests.swift */; };
 		D0C6252023FB232B00388E13 /* Staff_Tracking_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C6251F23FB232B00388E13 /* Staff_Tracking_appUITests.swift */; };
+		D0E47B8D2414620E001DB5EB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E47B8C2414620E001DB5EB /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D00B7B3D2416CE8C005302A8 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		D01E499C24107B9F00587855 /* LogbookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookViewController.swift; sourceTree = "<group>"; };
+		D01E499E24107BB100587855 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D059B4B024058256000C8126 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		D0B50AA82401BD48007CD5BD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D0B50AAA2401BD6F007CD5BD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +66,7 @@
 		D0C6251B23FB232B00388E13 /* Staff Tracking appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Staff Tracking appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C6251F23FB232B00388E13 /* Staff_Tracking_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff_Tracking_appUITests.swift; sourceTree = "<group>"; };
 		D0C6252123FB232B00388E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E47B8C2414620E001DB5EB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,9 @@
 				D0C624FE23FB232A00388E13 /* ViewController.swift */,
 				D0B50AA82401BD48007CD5BD /* LoginViewController.swift */,
 				D0B50AAA2401BD6F007CD5BD /* HomeViewController.swift */,
+				D01E499C24107B9F00587855 /* LogbookViewController.swift */,
+				D01E499E24107BB100587855 /* ProfileViewController.swift */,
+				D00B7B3D2416CE8C005302A8 /* PeopleViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -132,6 +143,7 @@
 			children = (
 				D0C624FA23FB232A00388E13 /* AppDelegate.swift */,
 				D0C624FC23FB232A00388E13 /* SceneDelegate.swift */,
+				D0E47B8C2414620E001DB5EB /* Result.swift */,
 				D0B50AAC2401BDAA007CD5BD /* View Controllers */,
 				D0C6250023FB232A00388E13 /* Main.storyboard */,
 				D0C6250623FB232A00388E13 /* Assets.xcassets */,
@@ -293,10 +305,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0C624FF23FB232A00388E13 /* ViewController.swift in Sources */,
+				D01E499D24107B9F00587855 /* LogbookViewController.swift in Sources */,
 				D0C6250523FB232A00388E13 /* Staff_Tracking_app.xcdatamodeld in Sources */,
 				D0C624FB23FB232A00388E13 /* AppDelegate.swift in Sources */,
 				D0B50AA92401BD48007CD5BD /* LoginViewController.swift in Sources */,
+				D00B7B3E2416CE8C005302A8 /* PeopleViewController.swift in Sources */,
 				D0C624FD23FB232A00388E13 /* SceneDelegate.swift in Sources */,
+				D01E499F24107BB100587855 /* ProfileViewController.swift in Sources */,
+				D0E47B8D2414620E001DB5EB /* Result.swift in Sources */,
 				D0B50AAB2401BD6F007CD5BD /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
