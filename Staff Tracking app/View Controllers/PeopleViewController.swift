@@ -24,6 +24,14 @@ class PeopleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        if(!(person?.ProfileImageUrl!.isEmpty)!){
+                   let url = URL(string: (person?.ProfileImageUrl ?? " "))!
+                   imageView.downloaded(from: url)
+               }
+        
         nameLbl.text="\(person?.FirstName ?? "") \(person?.LastName ?? "")"
         
         userIdLbl.text=String(person?.UserId ?? -1)
@@ -32,7 +40,10 @@ class PeopleViewController: UIViewController {
         workMinLbl.text = String(person?.TodayWorkMinutes ?? 0)
         totalMinLbl.text = String(person?.TodayTravelMinutes ?? 0)
         totalMiles.text = String(person?.TodayTotalMiles ?? 0)
-        lastUpdateLbl.text = person?.LastUpdateDateTimeUTC
+        lastUpdateLbl.text = person?.LastUpdateDateTimeUtc 
+        
+      
+        
         // Do any additional setup after loading the view.
     }
     

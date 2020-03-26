@@ -19,6 +19,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         invalidLabel.isHidden=true
+        activityIndicator.isHidden=false
+        activityIndicator.hidesWhenStopped=true;
         // Do any additional setup after loading the view.
     }
   
@@ -28,11 +30,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var invalidLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBAction func loginDidTap( sender:Any ) {
         //Get Username and password
         username = usernameTextBox.text ?? ""
         password = passwordTextBox.text ?? ""
         
+        loginButton.isEnabled=false
+        cancelButton.isEnabled=false
+        usernameTextBox.isEnabled=false
+        passwordTextBox.isEnabled=false;
+        activityIndicator.startAnimating()
         //set up for API request
         let loginString = String(format: "%@:%@", username, password)
         let loginData = loginString.data(using: String.Encoding.utf8)!
@@ -46,6 +54,22 @@ class LoginViewController: UIViewController {
         //API request
         let task = urlConnection.dataTask(with: request) {
           (data, response, error) in
+            DispatchQueue.main.async { self.activityIndicator.stopAnimating()
+            
+            if(result.ResultCodeName=="Success"){
+                
+                self.performSegue(withIdentifier: "logIn", sender: self)
+            }
+            else{
+                
+                self.invalidLabel.isHidden=false
+                self.loginButton.isEnabled=true
+                self.cancelButton.isEnabled=true
+                self.usernameTextBox.isEnabled=true
+                self.passwordTextBox.isEnabled=true
+                
+            }
+            }
           // check for any errors
           guard error == nil else {
             print("error calling GET on /todos/1")
@@ -71,13 +95,8 @@ class LoginViewController: UIViewController {
           }
             
         }
+        //print(result.ResultCodeName)
         
-        if(result.ResultCodeName=="Success"){
-             performSegue(withIdentifier: "logIn", sender: self)
-        }
-        else{
-            invalidLabel.isHidden=false
-        }
         task.resume()
     }
     

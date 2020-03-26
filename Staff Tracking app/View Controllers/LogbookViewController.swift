@@ -27,8 +27,8 @@ class thing{
               let TravelStatus: String?
               let ExtendedTravelStatus: String?
               let Miles: Double?
-              let ProfileImageURL: String?
-              let LastIntervalImageURL: String?
+              let ProfileImageUrl: String?
+              let LastIntervalImageUrl: String?
               let DurationMinutes: Int?
               let DurationString:String?
               let TodayTravelMinutes: Int?
@@ -38,7 +38,7 @@ class thing{
               let TodayTotalMinutes: Int?
               let TodayTotalString: String?
               let TodayTotalMiles: Double?
-              let LastUpdateDateTimeUTC: String?
+              let LastUpdateDateTimeUtc: String?
               init(){
                      UserId=0
                      FirstName=""
@@ -46,8 +46,8 @@ class thing{
                      TravelStatus=""
                      ExtendedTravelStatus=""
                      Miles=0.0
-                     ProfileImageURL=""
-                     LastIntervalImageURL=""
+                     ProfileImageUrl=""
+                     LastIntervalImageUrl=""
                      DurationMinutes=0
                      DurationString=""
                      TodayTravelMinutes=0
@@ -57,7 +57,7 @@ class thing{
                      TodayTotalMinutes=0
                      TodayTotalString=""
                      TodayTotalMiles=0.0
-                     LastUpdateDateTimeUTC=""
+                     LastUpdateDateTimeUtc=""
                  }
           }
 }
@@ -94,10 +94,14 @@ class LogbookViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate=self
         tableView.dataSource=self
+        tableView.isHidden=true
+        activityIndicator.hidesWhenStopped=true
+        activityIndicator.startAnimating()
         let loginString = String(format: "%@:%@", username, password)
         let loginData = loginString.data(using: String.Encoding.utf8)!
         let base64LoginString = loginData.base64EncodedString()
@@ -127,7 +131,10 @@ class LogbookViewController: UIViewController, UITableViewDelegate, UITableViewD
             var result = try
                 JSONDecoder().decode(thing.logBookResults.self , from: data)
                 self.info = result.ReturnValue ?? [thing.returnValue]()
-               
+            
+            
+                self.activityIndicator.stopAnimating()
+                self.tableView.isHidden=false
                    
             } catch let jsonErr {
             print("error trying to convert data to JSON: ", jsonErr)
