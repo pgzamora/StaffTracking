@@ -134,8 +134,9 @@ class LogbookViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             
                 self.activityIndicator.stopAnimating()
+                
                 self.tableView.isHidden=false
-                   
+                
             } catch let jsonErr {
             print("error trying to convert data to JSON: ", jsonErr)
             return
