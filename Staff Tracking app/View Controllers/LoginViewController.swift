@@ -54,22 +54,7 @@ class LoginViewController: UIViewController {
         //API request
         let task = urlConnection.dataTask(with: request) {
           (data, response, error) in
-            DispatchQueue.main.async { self.activityIndicator.stopAnimating()
             
-            if(result.ResultCodeName=="Success"){
-                
-                self.performSegue(withIdentifier: "logIn", sender: self)
-            }
-            else{
-                
-                self.invalidLabel.isHidden=false
-                self.loginButton.isEnabled=true
-                self.cancelButton.isEnabled=true
-                self.usernameTextBox.isEnabled=true
-                self.passwordTextBox.isEnabled=true
-                
-            }
-            }
           // check for any errors
           guard error == nil else {
             print("error calling GET on /todos/1")
@@ -86,8 +71,24 @@ class LoginViewController: UIViewController {
           do {
             result = try
                 JSONDecoder().decode(Result.self, from: data)
-        print(result.ReturnValue?.Profile?.PhoneNumber ?? "BAD request")
-        
+        //print(result.ReturnValue?.Profile?.PhoneNumber ?? "BAD request")
+            DispatchQueue.main.async { self.activityIndicator.stopAnimating()
+                if(result.ResultCodeName=="Success"){
+                    
+                    self.performSegue(withIdentifier: "logIn", sender: self)
+                }
+                else{
+                    
+                    self.invalidLabel.isHidden=false
+                    self.loginButton.isEnabled=true
+                    self.cancelButton.isEnabled=true
+                    self.usernameTextBox.isEnabled=true
+                    self.passwordTextBox.isEnabled=true
+                    
+                }
+            
+            }
+       
             
           } catch let jsonErr {
             print("error trying to convert data to JSON: ", jsonErr)
@@ -103,5 +104,57 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         _ = segue.destination as! HomeViewController
        
+    }
+    func LoadPeople(){
+               let loginString = String(format: "%@:%@", username, password)
+               let loginData = loginString.data(using: String.Encoding.utf8)!
+               let base64LoginString = loginData.base64EncodedString()
+               let url = URL(string: "https://vpstimedev.vantagepnt.com/Api/Supervisor/GetSummarySubordinatesLogList")!
+               var request = URLRequest(url: url)
+               request.httpMethod = "GET"
+               request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+               let urlConnection = URLSession.shared
+                      
+               //API request
+               let task = urlConnection.dataTask(with: request) {
+                   (data, response, error) in
+                   // check for any errors
+                   guard error == nil else {
+                   print("error calling GET on /todos/1")
+                   print(error!)
+                   return
+                   }
+                   // make sure we got data
+                   guard let data = data else {
+                   print("Error: did not receive data")
+                   return
+                   }
+                        
+                   //parse Json
+                   do {
+                   var result = try
+                       JSONDecoder().decode(thing.logBookResults.self , from: data)
+                       info = result.ReturnValue ?? [thing.returnValue]()
+                       
+                   
+                       //self.activityIndicator.stopAnimating()
+                       
+                       //self.tableView.isHidden=false
+                       
+                   } catch let jsonErr {
+                   print("error trying to convert data to JSON: ", jsonErr)
+                   return
+                   }
+                   info.forEach{ team in
+                       team.SubordinatesLog?.forEach{ person in
+                           peeps.append(person)
+                       }
+                   }
+                APICallDone=true
+                 
+                   
+                   //self.tableView.reloadData()
+               }
+               task.resume()
     }
 }
