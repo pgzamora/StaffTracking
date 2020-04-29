@@ -34,18 +34,18 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: (result.ReturnValue?.Profile?.ProfileImageUrl ?? "")!)!
-        var request = URLRequest(url: url)
+        let url = URL(string: (profileResult.ReturnValue?.Profile?.ProfileImageUrl ?? "Unknown")!)!
+        _ = URLRequest(url: url)
       
         imageView.downloaded(from: url)
        
         
-        let firstName = (result.ReturnValue?.Profile?.FirstName ?? "")
-        let lastName = (result.ReturnValue?.Profile?.LastName ?? "")
+        let firstName = (profileResult.ReturnValue?.Profile?.FirstName ?? "")
+        let lastName = (profileResult.ReturnValue?.Profile?.LastName ?? "")
             nameLabel.text = firstName + "" + lastName
         
-        vehicleLabel.text = result.ReturnValue?.Profile?.Vehicle
-        phoneLabel.text = result.ReturnValue?.Profile?.PhoneNumber
+        vehicleLabel.text = profileResult.ReturnValue?.Profile?.Vehicle
+        phoneLabel.text = profileResult.ReturnValue?.Profile?.PhoneNumber
                
         // Do any additional setup after loading the view.
     }

@@ -7,11 +7,41 @@
 //
 
 import UIKit
+
+    struct locationResult:Decodable{
+        let ReturnValue: coordinateValue?
+        let ResultCodeName: String?
+        init() {
+            ReturnValue=coordinateValue()
+            ResultCodeName = " "
+        }
+        
+    }
+    struct coordinateValue:Decodable{
+        let CurrentCoordinates:CurCoordinates?
+        //let UserId: Int?
+        init() {
+            CurrentCoordinates=CurCoordinates()
+            //UserId=0
+        }
+    }
+    struct CurCoordinates:Codable {
+        var Longitude: Double?
+        var Latitude: Double?
+        init() {
+            Longitude = 0.0
+            Latitude = 0.0
+        }
+        init(Long: Double, Lat: Double) {
+            self.Longitude = Long
+            self.Latitude = Lat
+        }
+    }
+
 class thing{
     struct logBookResults:Decodable{
         let ReturnValue: [returnValue]?
-           
-       }
+        let ResultCodeName: String?       }
 
     struct returnValue:Decodable{
               let TrackingAppTeamID: Int?
@@ -69,6 +99,7 @@ class thing{
 var peeps=[thing.subordinatesLog]()
 var currentPeeps=[thing.subordinatesLog]()
 var info = [thing.returnValue]()
+
 var APICallDone=false
 class LogbookViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
@@ -109,9 +140,15 @@ class LogbookViewController: UIViewController, UITableViewDelegate, UITableViewD
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         switch selectedScope {
         case 0:
-            currentPeeps=peeps.filter({ (subordinatesLog) -> Bool in (subordinatesLog.FirstName?.lowercased().contains(text.lowercased()) ?? false)})
+            if text.isEmpty{currentPeeps=peeps}
+            else{
+                currentPeeps=peeps.filter({ (subordinatesLog) -> Bool in (subordinatesLog.FirstName?.lowercased().contains(text.lowercased()) ?? false)})
+            }
         case 1:
+            if text.isEmpty{currentPeeps=peeps}
+            else{
             currentPeeps=peeps.filter({ (subordinatesLog) -> Bool in (subordinatesLog.LastName?.lowercased().contains(text.lowercased()) ?? false)})
+            }
         default:
             return currentPeeps=peeps
         }
@@ -123,7 +160,7 @@ class LogbookViewController: UIViewController, UITableViewDelegate, UITableViewD
             destination.person=currentPeeps[tableView.indexPathForSelectedRow!.row]
         }
     }
-
+   
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -155,7 +192,7 @@ class LogbookViewController: UIViewController, UITableViewDelegate, UITableViewD
                         
                    //parse Json
                    do {
-                   var result = try
+                    let result = try
                        JSONDecoder().decode(thing.logBookResults.self , from: data)
                        info = result.ReturnValue ?? [thing.returnValue]()
                        
@@ -170,7 +207,8 @@ class LogbookViewController: UIViewController, UITableViewDelegate, UITableViewD
                             APICallDone=true
                             currentPeeps=peeps
                             self.tableView.reloadData()
-                       }
+                            self.locationGetter()
+                        }
                        
                        
                    } catch let jsonErr {
@@ -181,6 +219,84 @@ class LogbookViewController: UIViewController, UITableViewDelegate, UITableViewD
                }
                task.resume()
     }
+    
+    
+    var locResult = locationResult()
+    fileprivate func getCoordinateAPI(peep: thing.subordinatesLog) {
+           
+           let loginString = String(format: "%@:%@", username, password)
+           let loginData = loginString.data(using: String.Encoding.utf8)!
+           let base64LoginString = loginData.base64EncodedString()
+           var url = URLComponents(string: "https://vpstimedev.vantagepnt.com/Api/Supervisor/GetSubordinateTravelHistoryList")
+           
+           url?.queryItems = [
+               URLQueryItem(name: "UserID", value: String(peep.UserId!)),
+               URLQueryItem(name: "PagingArgs.Page", value: String(1))
+           ]
+           
+           
+           var request = URLRequest(url: (url?.url)!)
+           request.httpMethod = "GET"
+           request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+           
+           let urlConnection = URLSession.shared
+           
+           //API request
+           let task = urlConnection.dataTask(with: request) {
+               (data, response, error) in
+               // check for any errors
+               guard error == nil else {
+                   print("error calling GET on /todos/1")
+                   print(error!)
+                   return
+               }
+               // make sure we got data
+               guard let data = data else {
+                   print("Error: did not receive data")
+                   return
+               }
+               
+               var long = 0.0
+               var lat = 0.0
+               
+               do {
+                   self.locResult = try
+                       JSONDecoder().decode(locationResult.self , from: data)
+                   if(self.locResult.ResultCodeName=="Success"){
+                         lat=self.locResult.ReturnValue?.CurrentCoordinates?.Latitude ?? 0.0
+                        long=self.locResult.ReturnValue?.CurrentCoordinates?.Longitude ?? 0.0
+                       
+                       let currentPoint = Point(Name:"\(peep.FirstName!) \(peep.LastName!)", Long:long, Lat: lat)
+                                                    
+                       Points.append(currentPoint)
+                       isFinishedGettingCoordinates = true
+                   }
+                    else{
+                        let alertController = UIAlertController(title: "ERROR", message: "Wasn't able to connect to server.", preferredStyle: .alert)
+                      alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                      self.present(alertController, animated: true)
+                    }
+               } catch let jsonErr {
+                   print("error trying to convert data to JSON: ", jsonErr)
+                  return
+               }
+               //print(" \(peep.FirstName!) \(peep.LastName!) Lat: \(lat) Long: \(long)")
+              return
+           }
+           
+           task.resume()
+           return
+       }
+       
+       func locationGetter(){
+            
+             for peep in peeps {
+                 if peep.UserId != nil{
+                  
+                  getCoordinateAPI(peep: peep)
+               }
+             }
+        }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate=self
@@ -209,6 +325,7 @@ class LogbookViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         // Do any additional setup after loading the view.
     }
+    
     @objc func refreshData(){
         let loginString = String(format: "%@:%@", username, password)
         let loginData = loginString.data(using: String.Encoding.utf8)!
@@ -236,7 +353,7 @@ class LogbookViewController: UIViewController, UITableViewDelegate, UITableViewD
                  
             //parse Json
             do {
-            var result = try
+                let result = try
                 JSONDecoder().decode(thing.logBookResults.self , from: data)
                 info = result.ReturnValue ?? [thing.returnValue]()
             
