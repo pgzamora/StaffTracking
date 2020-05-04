@@ -257,9 +257,10 @@ class HomeViewController: UIViewController {
                                                  
                     Points.append(currentPoint)
                     self.count+=1
-                    
+                   
                     if peeps.count == self.count{
                          isFinishedGettingCoordinates=true
+                         DispatchQueue.main.async {
                         if(defaults.bool(forKey: keys.isTimeRunning)){
                             self.startButton.backgroundColor=#colorLiteral(red: 0.01088213548, green: 0.7961999774, blue: 0.2763773501, alpha: 1)
                             self.stopButton.isEnabled=true
@@ -270,7 +271,7 @@ class HomeViewController: UIViewController {
                              self.startButton.backgroundColor=#colorLiteral(red: 0.01088213548, green: 0.7961999774, blue: 0.2763773501, alpha: 1)
                             self.stopButton.backgroundColor=#colorLiteral(red: 0.9993237853, green: 0.1485110521, blue: 0, alpha: 1)
                         }
-
+                        }
                         
                     }
                    
